@@ -5,7 +5,7 @@
   "author": "Gustavo G Passos <girardi_gustavo@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev src/index.ts --ignore-watch node_modules",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
     "pg": "^8.6.0",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.34",

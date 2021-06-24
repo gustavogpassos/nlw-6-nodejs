@@ -9,9 +9,11 @@ interface IUserRequest {
 
 class CreateUserService {
   async execute({ name, email, admin }: IUserRequest) {
+
     const usersRepository = getCustomRepository(UsersRepositories);
+
     if (!email) {
-      throw new Error("Email invalid");
+      throw new Error("Invalid email");
     }
     const userAlreadyExists = await usersRepository.findOne({
       email
