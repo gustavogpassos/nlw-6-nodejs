@@ -21,6 +21,12 @@ class User {
   @Column()
   password: string;
 
+  @Column()
+  department:string;
+
+  @Column()
+  occupation:string
+
   @CreateDateColumn()
   created_at: Date;
 

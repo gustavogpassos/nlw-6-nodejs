@@ -8,10 +8,12 @@ interface IUserRequest {
   email: string;
   admin?: boolean;
   password: string;
+  department: string;
+  occupation: string;
 }
 
 class CreateUserService {
-  async execute({ name, email, admin = false, password }: IUserRequest) {
+  async execute({ name, email, admin = false, password, department, occupation }: IUserRequest) {
 
     const usersRepository = getCustomRepository(UsersRepositories);
 
